@@ -35,11 +35,18 @@ describe('Calculator.js', function() {
     it('should initialize the total=0', function() {
         const calculator = new Calculator();
 
-        // let person1 = { name: 'laos' };
-        // let person2 = { name: 'laos' };
-        // expect(person1).toBe(person2)
-        // expect(person1).toEqual(person2)
-
+        expect(calculator.total).toBeFalsy();
         expect(calculator.total).toBe(0);
-    })
+    });
+
+    //ToEqual Matcher
+    it('should initialize the constructor', function() {
+        const calculator1 = new Calculator();
+        const calculator2 = new Calculator();
+
+        expect(calculator1).toBeTruthy();
+        expect(calculator2).toBeTruthy();
+        expect(calculator1).toEqual(calculator2);
+    });
+
 }); 
