@@ -1,3 +1,4 @@
+
 function Calculator(){
     this.total = 0;
 }

@@ -1,7 +1,7 @@
 
 describe('Calculator.js', function() {
     // to disable xit or xdescribe
-    xit('should add number to the total', function() {
+    it('should add number to the total', function() {
         //expect(5+5).toBe(10)
         //expected to be 5
         const calculator = new Calculator();
@@ -31,4 +31,15 @@ describe('Calculator.js', function() {
         expect(calculator.total).toBe(5);
     });
 
+    // toBe matcher (===)
+    it('should initialize the total=0', function() {
+        const calculator = new Calculator();
+
+        // let person1 = { name: 'laos' };
+        // let person2 = { name: 'laos' };
+        // expect(person1).toBe(person2)
+        // expect(person1).toEqual(person2)
+
+        expect(calculator.total).toBe(0);
+    })
 }); 
