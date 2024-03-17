@@ -64,4 +64,19 @@ describe('Calculator.js', function() {
         expect(calculator.divide).toBeDefined();
         expect(calculator.multiply).toBeDefined();
     });
+
+    // toBeNull
+    it('can override total value', function() {
+        const calculator = new Calculator();
+        calculator.total = null;
+        expect(calculator.total).toBeNull();
+    });
+
+    //toContain 
+    it('should have the calculator constructor', function() {
+        const calculator = new Calculator();
+        const arr = [1,2,3,4,5]
+        expect(arr).toContain(3);
+        expect(calculator.constructor.name).toContain('Calc');
+    })
 }); 
